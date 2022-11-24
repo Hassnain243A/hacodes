@@ -5,9 +5,9 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 $mail->Host = 'email-host-name';
-$mail->Username   = 'sender-email';
-$mail->Password   = 'email-password';
-$mail->Port       = 465;
+$mail->Username = 'sender-email';
+$mail->Password = 'email-password';
+$mail->Port = 465;
 $mail->setFrom('sender-email', 'Mailer Name');
 $mail->addAddress('receiver-email', 'Receiver Name');
 $mail->addAttachment('demo.zip', 'Demo Zip File');
