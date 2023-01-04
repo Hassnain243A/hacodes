@@ -4,7 +4,7 @@ use Orhanerday\OpenAi\OpenAi;
 require 'src/OpenAi.php';
 require 'src/Url.php';
 use Orhanerday\OpenAi\OpenAi;
-$open_ai = new OpenAi('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');
+$open_ai = new OpenAi('your-api-key');
 $prompt = $_GET['prompt'];
 $complete = $open_ai->completion([
     // parameters here
