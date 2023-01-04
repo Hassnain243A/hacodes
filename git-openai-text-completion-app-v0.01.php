@@ -6,20 +6,22 @@ require 'src/Url.php';
 use Orhanerday\OpenAi\OpenAi;
 $open_ai = new OpenAi('your-api-key');
 $prompt = $_GET['prompt'];
-$complete = $open_ai->completion([
-    // parameters here
-], function($curl_info, $data){
+// object with all parameters
+[
+    'model' => 'text-davinci-003',
+    'prompt' => $prompt,
+    'temperature' => 0.7,
+    'max_tokens' => 256,
+    'top_p' => 1,
+    'frequency_penalty' => 0,
+    'presence_penalty' => 0,
+    'stream' => true
+]
+$complete = $open_ai->completion(
+    // parameter object here
+, function($curl_info, $data){
     // response here
 });
-// parameters
-'model' => 'text-davinci-003',
-'prompt' => $prompt,
-'temperature' => 0.7,
-'max_tokens' => 256,
-'top_p' => 1,
-'frequency_penalty' => 0,
-'presence_penalty' => 0,
-'stream' => true
 // response
 echo $data;
 echo PHP_EOL;
