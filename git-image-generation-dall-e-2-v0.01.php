@@ -3,7 +3,7 @@ require __DIR__ . '/vendor/autoload.php';
 use Orhanerday\OpenAi\OpenAi;
 $open_ai = new OpenAi('your-api-key');
 $prompt = $_POST['prompt'];
-// prepare object for request
+// create array for response preparation
 [
     "prompt" => $prompt,
     "n" => 3,
@@ -11,7 +11,7 @@ $prompt = $_POST['prompt'];
     "response_format" => "b64_json",
 ]
 $complete = $open_ai->image(
-// object goes here
+// array goes here
 );
 echo $complete;
 ?>
