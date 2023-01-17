@@ -4,9 +4,9 @@ button.onclick = () => {
     }
 }
 
-var http = new XMLHttpRequest();
 var data = new FormData()
 data.append('prompt', input.value)
+var http = new XMLHttpRequest();
 http.open('POST', 'request.php', true)
 http.send(data)
 // Assign a function to the onload property
