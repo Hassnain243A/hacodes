@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 use Orhanerday\OpenAi\OpenAi;
-$open_ai = new OpenAi('');
+$open_ai = new OpenAi('your-api-key');
 $prompt = 'Marv is a chatbot that reluctantly answers questions with sarcastic responses:' . $_POST['prompt'];
 $complete = $open_ai->completion([
     'model' => 'text-davinci-003',
