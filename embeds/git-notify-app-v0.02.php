@@ -9,7 +9,6 @@ $device_tokens = [
     "****",
     "****"
 ];
-
 foreach ($device_tokens as $token) {
     $response = sendFCMNotification($access_token, $token);
     echo $response . '<br>';
