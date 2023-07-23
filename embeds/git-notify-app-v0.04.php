@@ -1,8 +1,8 @@
 <?php
-$client->setAuthConfig("sample-6140e-firebase******.json");
+
 
 include "./get_access_token.php";
-$access_token = get_access_token("sample-6140e-firebase******.json");
+$access_token = get_access_token("sa******-firebase******.json");
 
 $device_tokens = [
     "****",
